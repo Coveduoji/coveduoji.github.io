@@ -1,0 +1,51 @@
+/* 鼠标美化 */
+
+/* 隐藏默认鼠标光标 */
+html,body{
+  cursor: none;
+}
+
+/* 隐藏链接的鼠标光标 */
+a{
+  cursor: none;
+}
+
+/* 圆形光标1样式 */
+.circle-cursor1 {
+  /* 固定定位，距离顶部和左侧的位置 */
+  position: fixed;
+  top: -3px;
+  left: -3px;
+  /* 宽度和高度，形成圆形 */
+  width: 8px;
+  height: 8px;
+  border-radius: 50%; /* 圆形的边界半径 */
+  background-color: rgb(237, 230, 230); /* 背景颜色 */
+  pointer-events: none; /* 不响应鼠标事件 */
+  z-index: 9999; /* 层级 */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); /* 居中 */
+  cursor: none; /* 隐藏光标 */
+}
+
+/* 圆形光标2样式 */
+.circle-cursor2 {
+  /* 固定定位，距离顶部和左侧的位置 */
+  position: fixed;
+  top: -8px;
+  left: -8px;
+  /* 宽度和高度，形成较大的圆形 */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%; /* 圆形的边界半径 */
+  background-color: rgba(87, 84, 84, 0.557); /* 背景颜色 */
+  pointer-events: none; /* 不响应鼠标事件 */
+  z-index: 9998; /* 层级 */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); /* 居中 */
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out; /* 过渡效果 */
+  cursor: none; /* 隐藏光标 */
+}

@@ -1,0 +1,48 @@
+/* 设置整个页面的外边距和内边距为0 */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 分类栏样式 */
+.categories {
+  background-color: #c04851; /* 背景颜色 */
+  padding: 20px; /* 内边距 */
+  height: 50px; /* 高度 */
+}
+
+/* 单个分类样式 */
+.category {
+  display: inline-block; /* 行内块元素显示 */
+  font-size: 25px; /* 字体大小 */
+  margin-top: 15px; /* 顶部外边距 */
+  margin-right: 20px; /* 右侧外边距 */
+  font-weight: bold; /* 字体加粗 */
+}
+/* 激活的分类样式 */
+.category.active {
+  color: rgb(255, 255, 255); /* 文本颜色 */
+}
+
+/* 图库容器样式 */
+.gallery {
+  -webkit-column-count: 4;
+     -moz-column-count: 4;
+          column-count: 4; /* 列数 */
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px; /* 列间距 */
+  max-width: 100%; /* 最大宽度 */
+  margin: 0 auto; /* 水平居中 */
+  padding: 20px; /* 内边距 */
+  background-color: #f8f4ed; /* 背景颜色 */
+}
+
+/* 图片样式 */
+.image {
+  display: block; /* 块级元素显示 */
+  margin-bottom: 20px; /* 底部外边距，设置图片间的垂直间距 */
+  width: 100%; /* 宽度占满容器 */
+  height: auto; /* 高度自适应 */
+  
+}

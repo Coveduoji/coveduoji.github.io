@@ -1,0 +1,48 @@
+
+@font-face {
+    font-family: "简园";
+    src: url(./白羊.ttf);
+}
+@font-face {
+    font-family: "时间";
+    src: url(./时间.ttf);
+}
+@font-face {
+    font-family: "叹书体";
+    src: url(./叹书体.ttf);
+}
+
+@font-face {
+    font-family: "汉仪行楷";
+    src: url(./汉仪行楷.ttf);
+}
+@font-face {
+    font-family: "字帮玩";
+    src: url(./字帮玩酷体.ttf);
+}
+@font-face {
+    font-family: "鸿雷简";
+    src: url(./鸿雷板书简体.ttf);
+}
+@font-face {
+    font-family: "佛系";
+    src: url(./演示佛系体.ttf);
+}
+.introduction h1{
+    font-family:"佛系";
+}
+.introduction h2{
+    font-family: "佛系";
+}
+#sentence{
+    font-family: "字帮玩";
+}
+#source{
+    font-family: "字帮玩";
+}
+.time{
+    font-family: "时间";
+}
+.date{
+    font-family: "时间";
+}

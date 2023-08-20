@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="js/style.js"></script>
+    <script src="js/mouse.js"></script>
+    <script src="js/date&weather.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/mouse.css" />
+    <!-- 字体 -->
+    <link rel="stylesheet" type="text/css" href="font/font_index.css" />
+
+    <div class="circle-cursor1"></div>
+    <div class="circle-cursor2"></div>
+    <title>度嵇</title>
+    <link rel="icon" href="./img/headshot.jpg" size="16x16" />
+  </head>
+  <body>
+    <!--鼠标-->
+    <div id="container" class="container">
+      <div class="circle"></div>
+      <div class="person">
+        <div id="header" class="header">
+          <div id="headshot" class="headshot">
+            <img
+              src="https://s1.ax1x.com/2023/06/03/pC9MhvD.jpg"
+              alt="大帅比"
+            />
+          </div>
+        </div>
+        <div class="introduction">
+          <h1>一个普通的信安带学生</h1>
+          <h2>——度嵇</h2>
+        </div>
+
+        <div id="personal_link" class="personal_link">
+          <div id="Email" class="Email">
+            <a href="mailto:2290852343@qq.com" target="_blank">
+              <img src="img\ico\Email.png" alt="邮箱" />
+            </a>
+          </div>
+          <div id="github" class="github">
+            <a href="https://github.com/Coveduoji" target="_blank">
+              <img src="img\ico\GitHub.png" />
+            </a>
+          </div>
+          <div id="bilibili" class="bilibili">
+            <a
+              href="https://space.bilibili.com/237270715?spm_id_from=333.1007.0.0"
+              target="_blank"
+            >
+              <img src="img/ico\bilibili.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="function_container" class="function_container">
+        <!-- 诗句 -->
+        <div id="shiju" class="top1">
+          <div id="hitokoto" style="text-align: center">
+            <p id="sentence" class="sentence"></p>
+            <p id="source" class="source"></p>
+          </div>
+        </div>
+        <div class="top2">
+          <script src="date&weather.js"></script>
+          <div id="time" class="time"></div>
+          <div id="date" class="date"></div>
+        </div>
+        <div class="function-box">
+          <div class="drawer">
+            <a href="https://chat.openai.com/" target="_blank">
+              <div id="gpt" class="contentbox">
+                <img
+                  width="50"
+                  height="50"
+                  src="https://img.icons8.com/pulsar-line/48/000000/chatgpt.png"
+                  alt="chatgpt"
+                />
+                <h1>Chat</h1>
+                <h2>-gpt</h2>
+              </div>
+            </a>
+          </div>
+          <div class="drawer">
+            <a href="function2.com" target="_blank">
+              <div id="cloud-pan" class="contentbox">
+                <img
+                  width="54"
+                  height="54"
+                  src="https://img.icons8.com/sf-black/64/cloud.png"
+                  alt="cloud"
+                />
+                <h3>网盘</h3>
+              </div>
+            </a>
+          </div>
+          <div class="drawer">
+            <a href="photowall.html" target="_blank">
+              <div id="photo-wall" class="contentbox">
+                <img
+                  width="50"
+                  height="50"
+                  src="https://img.icons8.com/fluency-systems-regular/48/stack-of-photos--v1.png"
+                  alt="照片墙"
+                />
+                <h3>照片墙</h3>
+              </div>
+            </a>
+          </div>
+          <div class="drawer">
+            <a href="tools.html" target="_blank">
+              <div class="contentbox">
+                <img
+                  width="50"
+                  height="50"
+                  src="https://img.icons8.com/windows/64/full-tool-storage-box-.png"
+                  alt="toolbox"
+                />
+                <h3>工具箱</h3>
+              </div>
+            </a>
+          </div>
+          <div class="drawer">
+            <a
+              href="http://weixin.qq.com/r/1xBZQZDEfs0BrdQi90XF"
+              target="_blank"
+            >
+              <div class="contentbox">
+                <img
+                  width="50"
+                  height="50"
+                  src="https://s1.ax1x.com/2023/06/06/pCi1PyV.png"
+                  alt="blog"
+                />
+                <h3>笔记</h3>
+              </div>
+            </a>
+          </div>
+          <div class="drawer">
+            <a href="resume.html" target="_blank">
+              <div id="resume" class="contentbox">
+                <img
+                  width="50"
+                  height="50"
+                  src="https://img.icons8.com/glyph-neue/64/parse-from-clipboard.png"
+                  alt="resume"
+                />
+                <h3>简历</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+/* 设置整个页面的外边距和内边距为0 */
+body {
+  margin: 0;
+  padding: 0;
+  cursor: none;
+  display: grid;
+
+}
+
+/* 顶部头部样式 */
+.head {
+  background-color: #c04851; /* 头部背景颜色 */
+  margin: 0px;/*外边距*/
+  padding: 0px; /* 内边距 */
+  height: 100%; /* 高度 */
+  text-align: center; /* 文本居中 */
+
+}
+
+/* 包含内容的容器 */
+.box {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f8f4ed; /* 背景颜色 */
+
+}
+
+/* 工具盒子容器 */
+.tool_box {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; /* 交叉轴对齐方式 */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; /* 显示为弹性容器 */
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; /* 弹性容器中的项目换行显示 */
+  max-width: 100%; /* 最大宽度 */
+  background-color: #00a38000; /* 背景颜色 */
+}
+
+/* 抽屉样式 */
+.drawer {
+  width: 25%; /* 宽度 */
+  aspect-ratio: 16 / 8; /* 纵横比 */
+  background-color: #00a38000; /* 背景颜色 */
+}
+
+
+/* 工具样式 */
+.tool {
+  width: 80%; /* 宽度 */
+  height: 80%; /* 高度 */
+  border-radius: 15px; /* 边框圆角 */
+  border: 2px solid rgba(0, 0, 0, 0); /* 边框样式 */
+  margin: 5%; /* 外边距 */
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0); /* 3D效果 */
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s; /* 过渡动画时间 */
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform; /* 过渡动画属性 */
+  background: #f8f4ed; /* 背景颜色 */
+  box-shadow: 25px 25px 44px #ddd9d3, -25px -25px 44px #ffffff; /* 阴影效果 */
+}
+
+/* 鼠标悬停时工具样式 */
+.tool:hover,
+.tool:focus,
+.tool:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9); /* 缩放效果 */
+  cursor: none; /* 鼠标悬停时的光标样式 */
+}
