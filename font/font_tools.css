@@ -2,9 +2,15 @@
     font-family: "汉仪行楷";
     src: url(./汉仪行楷.ttf);
 }
-
-h1,h2,h3,p{
+@font-face {
+    font-family: "苍耳今楷";
+    src: url(./苍耳今楷.ttf);
+}
+h1,h2,p{
     font-family: "汉仪行楷";
+}
+h3{
+    font-family: "苍耳今楷";
 }
 p{
     font-size: 1em;
@@ -17,15 +23,14 @@ h1{
 h2{
     font-size: 2.5em;
     margin: 0px;
-    padding: 20px;
+    padding: 1em;
 }
 h3{
     font-size: 1.5em;
     padding: 0;
-    margin: 0;
+    margin: 0.5em;
 }
 a {
     text-decoration: none; /* 去掉超链接下的下划线 */
-    cursor: none;/*去掉悬停时的手指图标*/
 }
 
