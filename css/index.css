@@ -1,53 +1,51 @@
 /* 设置网页背景 */
 body {
-  background-image: url('https://s1.ax1x.com/2023/06/03/pC9MYEn.jpg');
-  background-repeat: no-repeat; /* 背景不重复 */
-  background-size: 100% auto; /* 背景覆盖方式 */
+  background-color: #fffefa;
 }
+a {
+  text-decoration: none; /* 去除所有链接的文本装饰线 */
+}
+
 
 /* 容器样式 */
 .container {
+  display: flex;
   position: absolute; /* 绝对定位 */
   top: 50%;
   left: 50%;
-  width: 1000px;
-  height: 480px;
+  width: 80%;
+  height: 80%;
   border-radius: 30px; /* 圆角 */
-  background-color: rgba(2, 2, 2, 0.365);
+  background-color: rgb(2, 2, 2);
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 水平和垂直居中 */
+          transform: translate(-50%, -50%); /*水平和垂直居中*/
+          border-radius: 30px;
+          background: #fffefa;
+          box-shadow: 15px 15px 30px #bebebe,
+                     -15px -15px 30px #fffefa;        
 }
 
 /* 左边模块样式 */
 .person {
-  position: absolute;
+  position: relative;
   background-color: rgba(50, 153, 153, 0);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 30%;
+  justify-content: center;
+  margin-left: 0 auto;
+  width: 40%;
   height: 100%;
-  left: 215px;
-  top: 55%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 水平和垂直居中 */
 }
 
 /* 旋转圆圈样式 */
 .circle {
-  position: relative;
-  background-color: rgba(255, 248, 248, 0);
-  top: 43px;
-  left: 74px;
-  width: 280px;
-  height: 280px;
+  position:absolute;
+  background-color: rgba(0, 0, 0, 0);
+  top:10%;
+  margin: 0 auto;
+  width: 70%;
+  aspect-ratio: 1/1;
   border-radius: 50%; /* 圆角 */
-  border: 2px solid rgba(255, 255, 255, 0.621);
+  border: 2px solid #000000;
   -webkit-animation: round 3s infinite;
           animation: round 3s infinite; /* 旋转动画 */
 }
@@ -73,12 +71,12 @@ body {
 }
 .circle:before {
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top:32%;
+  aspect-ratio: 1/1;
   content: '';
   width: 20px;
   height: 20px;
-  background: #ffffff;
+  background: #000000;
   border-radius: 50%;
 }
 
@@ -86,19 +84,21 @@ body {
 .header {
   position: absolute;
   background-color: rgba(176, 58, 58, 0);
-  top: 35px;
-  width: 250px;
-  height: 250px;
+  top:10%;
+  margin: 0 auto;
+  width: 70%;
+  aspect-ratio: 1/1;
   border-radius: 50%; /* 圆角 */
 }
 
 /* 头像图像容器样式 */
 .headshot {
+  background-color: rgba(37, 198, 198, 0);
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200px;
-  height: 200px;
+  width: 70%;
+  height: 70%;
   border-radius: 50%;
   overflow: hidden;
   -webkit-transform: translate(-50%, -50%);
@@ -119,211 +119,189 @@ body {
 /* 个人介绍样式 */
 .introduction {
   position: absolute;
-  width: 280px;
-  height: 80px;
-  top: 65%;
-  border-bottom: 2px solid #ffffff;
+  width:70%;
+  height: 8%;
+  top: 68%;
+  border-bottom: 2px solid #000000;
 }
-.introduction h1 {
-  font-weight: bold;
-  font-size: 28px;
-  margin: 0;
-  color: #ffffff;
-}
+.introduction h1,
 .introduction h2 {
-  font-size: 18px;
+  font-weight: bold;
   text-align: center;
+  font-size: 20%;
   margin: 0;
-  color: #ffffff;
+  color: #000000;
 }
 
 /* 个人链接样式 */
 .personal_link {
   position: absolute;
-  background-color: rgba(250, 235, 215, 0);
-  width: 280px;
-  height: 30px;
-  top: 85%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  background-color: #ffffff00;
+  width: 100%;
+  height: 8%;
+  top: 78%;
+  left: 0;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center; /* 水平居中 */
+
 }
-.personal_link img {
-  margin: 8px;
-  width: 25px;
-  height: 25px;
+
+.fab {
+  font-size: 100%;
+  color: #000000; /* 调整图标颜色为白色 */
+  margin: -7%;
+  /* 可以根据需要调整其他样式 */
 }
+
+
 
 /* 右边模块样式 */
 .function_container {
-  position: absolute;
-  background-color: rgba(198, 148, 83, 0);
-  top: 50%;
-  left: 70%;
-  width: 560px;
-  height: 430px;
-  border-radius: 30px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 水平和垂直居中 */
+  position: relative;
+  background-color: rgba(198, 148, 83, 0.231);
+  width: 60%;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-/* 诗句样式 */
-.top1 {
+/* 初始样式 */
+.top1, .top2 {
   position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 250px;
-  height: 100px;
-  top: 18%;
-  left: 25%;
-  color: #ffffff;
-  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  max-width: 90%; /* 设置最大宽度 */
+  height: 20%;
+  top: 10%;
+  color: #000000;
+  border-radius: 23px;
   background-color: rgba(37, 81, 193, 0.581);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 水平和垂直居中 */
+  margin: 2vm;
+}
+.top2{
+  right: 5%;
+}
+.top1{
+  left: 5%;
 }
 
-/* 天气日期时间样式 */
-.top2 {
-  position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 250px;
-  height: 100px;
-  top: 18%;
-  left: 75%;
-  border-radius: 5px;
-  background-color: rgba(37, 81, 193, 0.581);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 水平和垂直居中 */
+#sentence {
+  font-size: 1.5vw; /* 使用视窗宽度的百分比 */
 }
+
+#source {
+  font-size: 1.3vw; /* 使用视窗宽度的百分比 */
+}
+
 .date {
   position: absolute;
   top: 15%;
-  color: #ffffff;
+  left: 50%;
+  color: #000000;
+  font-size: 1vw; /* 使用视窗宽度的百分比 */
+  transform: translateX(-50%); /* 仅水平居中 */
 }
+
 .time {
   position: absolute;
-  top: 60%;
+  top: 30%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 50px;
-  color: aliceblue;
+  color: #000000;
+  font-size: 5vw; /* 使用视窗宽度的百分比 */
+  transform: translateX(-50%); /* 仅水平居中 */
 }
+
+/* 响应式调整 - 平板设备 */
+@media (max-width: 1024px) {
+  .top1, .top2 {
+    width: 70%; /* 在平板设备上适度增加宽度 */
+    font-size: 2vw; /* 调整字体大小 */
+  }
+}
+
+/* 响应式调整 - 手机设备 */
+@media (max-width: 768px) {
+  .top1, .top2 {
+    width: 90%; /* 在手机设备上增加宽度 */
+    font-size: 3vw; /* 进一步调整字体大小 */
+  }
+}
+
+/* 根据需要添加其他媒体查询 */
+@media (max-width: 480px) {
+  .top1, .top2 {
+    width: 100%; /* 在更小的屏幕上占据整个宽度 */
+    font-size: 4vw; /* 进一步调整字体大小 */
+  }
+
+  .date {
+    font-size: 2vw; /* 调整日期字体大小 */
+  }
+
+  .time {
+    font-size: 8vw; /* 调整时间字体大小 */
+  }
+}
+
 
 /* 功能区样式 */
 .function-box {
-  background-color: rgba(58, 58, 146, 0);
   position: relative;
-  width: 100%;
-  height: 60%;
   top: 70%;
   left: 50%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  transform: translate(-50%, -50%);
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 水平和垂直居中 */
-}
-.drawer {
-  background-color: #38313100;
-  width: 33.3%;
-  height: 50%;
-  position: relative;
-  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 60%;
+  background-color: rgba(58, 58, 146, 0);
 }
 
-/* 功能内容样式 */
+.drawer {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: 33.33%;
+  height: 50%;
+  background-color: #a42e2e;
+}
+
 .contentbox {
-  background-color: #963b3b7d;
-  width: 150px;
-  height: 80px;
-  top: 20%;
-  left: 12.5%;
+  position:absolute;
+  display: flex; /* 使用 Flexbox 布局 */
+  align-items: center; /* 垂直居中 */
+  width: 30%;
+  aspect-ratio: 2/1;
   border-radius: 10px;
-  position: absolute;
-  display: inline-block;
-  -webkit-transform: perspective(1px) translateZ(0);
-          transform: perspective(1px) translateZ(0);
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  background-color: #0026ff;
+  overflow: hidden; /* 防止子元素溢出 */
 }
-.contentbox img {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.contentbox h1 {
-  position: absolute;
-  font-size: 30px;
-  color: #000000;
-  top: 23%;
-  left: 63%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.contentbox h2 {
-  color: #000;
-  position: absolute;
-  font-size: 13px;
-  top: 55%;
-  left: 75%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
+
+.contentbox img,
+.contentbox h1,
+.contentbox h2,
 .contentbox h3 {
-  position: absolute;
-  font-size: 20px;
-  color: #000000;
-  top: 25%;
-  left: 60%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  flex: 1; /* 均等占据剩余空间 */
+  padding: 10px; /* 添加一些内边距 */
 }
+
+.contentbox img {
+  max-width: 100%; /* 图片最大宽度为容器宽度 */
+  height: auto; /* 图片高度自适应 */
+}
+
+.contentbox h1,
+.contentbox h2,
+.contentbox h3 {
+  color: #000;
+  margin: 0; /* 移除默认的外边距 */
+  font-size: 2vm;
+}
+
 .contentbox:hover, .contentbox:focus, .contentbox:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
