@@ -1,186 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
-  ><!--bulma框架-->
-  
-    <script src="js/style.js"></script>
-    <script src="js/mouse.js"></script>
-    <script src="js/date&weather.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/mouse.css" />
-<!-- 字体 -->
-    <link rel="stylesheet" type="text/css" href="font/font_index.css" />
-    <!-- 引入 Font Awesome 的 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<!--鼠标-->
-    <div class="circle-cursor1"></div>
-    <div class="circle-cursor2"></div>
-    <title>度嵇</title>
-    <link rel="icon" href="./img/headshot.jpg" size="16x16" />
-  </head>
-  <body>
-    
-    <div id="container" class="container">
-      
-      <div class="person">
-        <div class="circle">
-          
-        </div>
-        <div id="header" class="header">
-          <div id="headshot" class="headshot">
-            <img
-              src="https://s1.ax1x.com/2023/06/03/pC9MhvD.jpg"
-              alt="大帅比"
-            />
-          </div>
-        </div>
-        <div class="introduction">
-          <h1>一个普通的信安带学生</h1>
-          <h2>——度嵇</h2>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"><!--bulma框架-->
 
-        <!-- <div id="personal_link" class="personal_link">
+  <script src="js/style.js"></script>
+  <script src="js/mouse.js"></script>
+  <script src="js/date&weather.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/mouse.css" />
+  <!-- 字体 -->
+  <link rel="stylesheet" type="text/css" href="font/font_index.css" />
+  <!-- 引入 Font Awesome 的 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-          <a href="https://twitter.com/YourTwitterHandle" target="_blank" class="social-icon">
-            <i class="fab fa-twitter"></i> 
+  <!--鼠标-->
+  <div class="circle-cursor1"></div>
+  <div class="circle-cursor2"></div>
+  <title>度嵇</title>
+  <link rel="icon" href="./img/headshot.jpg" size="16x16" />
+</head>
+
+<body>
+
+  <div id="container" class="level">
+
+    <div class="level-center">
+      <div class="circle">
+
+      </div>
+      <div id="header" class="header">
+        <div id="headshot" class="headshot">
+          <img src="https://s1.ax1x.com/2023/06/03/pC9MhvD.jpg" alt="大帅比" />
+        </div>
+      </div>
+      <div class="introduction">
+        <h1>一个普通的信安带学生</h1>
+        <h2>——度嵇</h2>
+      </div>
+
+
+
+      <div id="personal_link" class="personal_link">
+        <!-- Twitter 图标链接 -->
+        <a href="https://twitter.com/YourTwitterHandle" target="_blank" class="personal_link">
+          <i class="fab fa-twitter"></i> <!-- 使用 Font Awesome 的 Twitter 图标 -->
         </a>
-
-          <div id="Email" class="Email">
-            <a href="mailto:2290852343@qq.com" target="_blank">
-              <img src="img\ico\Email.png" alt="邮箱" />
-            </a>
-          </div>
-          <div id="github" class="github">
-            <a href="https://github.com/Coveduoji" target="_blank">
-              <img src="img\ico\GitHub.png" />
-            </a>
-          </div>
-          <div id="bilibili" class="bilibili">
-            <a
-              href="https://space.bilibili.com/237270715?spm_id_from=333.1007.0.0"
-              target="_blank"
-            >
-              <img src="img/ico\bilibili.png" />
-            </a>
-          </div>
-        </div> -->
-
-        <div id="personal_link" class="personal_link">
-          <!-- Twitter 图标链接 -->
-          <a href="https://twitter.com/YourTwitterHandle" target="_blank" class="personal_link">
-              <i class="fab fa-twitter"></i> <!-- 使用 Font Awesome 的 Twitter 图标 -->
-          </a>
-          <!-- 其他社交媒体图标链接 -->
-      </div>
-      
-
+        <!-- 其他社交媒体图标链接 -->
       </div>
 
-      <div id="function_container" class="function_container">
-        <!-- 诗句 -->
-        <div id="shiju" class="top1">
-          <div id="hitokoto" style="text-align: center">
-            <p id="sentence" class="sentence"></p>
-            <p id="source" class="source"></p>
-          </div>
-        </div>
-        <div class="top2">
-          <script src="date&weather.js"></script>
-          <div id="time" class="time"></div>
-          <div id="date" class="date"></div>
-        </div>
-        <div class="function-box">
-          <div class="drawer">
-            <a href="https://chat.openai.com/" target="_blank">
-              <div id="gpt" class="contentbox">
-                <img
-                  width="50"
-                  height="50"
-                  src="https://img.icons8.com/pulsar-line/48/000000/chatgpt.png"
-                  alt="chatgpt"
-                />
-                <h1>Chat</h1>
-                <h2>-gpt</h2>
-              </div>
-            </a>
-          </div>
-          <div class="drawer">
-            <a href="function2.com" target="_blank">
-              <div id="cloud-pan" class="contentbox">
-                <img
-                  width="54"
-                  height="54"
-                  src="https://img.icons8.com/sf-black/64/cloud.png"
-                  alt="cloud"
-                />
-                <h3>网盘</h3>
-              </div>
-            </a>
-          </div>
-          <div class="drawer">
-            <a href="photowall.html" target="_blank">
-              <div id="photo-wall" class="contentbox">
-                <img
-                  width="50"
-                  height="50"
-                  src="https://img.icons8.com/fluency-systems-regular/48/stack-of-photos--v1.png"
-                  alt="照片墙"
-                />
-                <h3>照片墙</h3>
-              </div>
-            </a>
-          </div>
-          <div class="drawer">
-            <a href="tools.html" target="_blank">
-              <div class="contentbox">
-                <img
-                  width="50"
-                  height="50"
-                  src="https://img.icons8.com/windows/64/full-tool-storage-box-.png"
-                  alt="toolbox"
-                />
-                <h3>工具箱</h3>
-              </div>
-            </a>
-          </div>
-          <div class="drawer">
-            <a
-              href="https://amused-gas-f68.notion.site/ba2bc5a0ec6b490d909607e295a6026f"
-              target="_blank"
-            >
-              <div class="contentbox">
-                <img
-                  width="50"
-                  height="50"
-                  src="https://s1.ax1x.com/2023/06/06/pCi1PyV.png"
-                  alt="blog"
-                />
-                <h3>笔记</h3>
-              </div>
-            </a>
-          </div>
-          <div class="drawer">
-            <a href="resume.html" target="_blank">
-              <div id="resume" class="contentbox">
-                <img
-                  width="50"
-                  height="50"
-                  src="https://img.icons8.com/glyph-neue/64/parse-from-clipboard.png"
-                  alt="resume"
-                />
-                <h3>简历</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+
     </div>
-  </body>
+
+   
+    
+  </div>
+  </div>
+  </div>
+</body>
+<script>
+  function getHitokoto() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://v1.hitokoto.cn");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                var hitokoto = response.hitokoto; // 获取一言内容
+                var from = response.from; // 获取来源
+                var sentenceElement = document.getElementById("sentence");
+                var sourceElement = document.getElementById("source");
+                sentenceElement.innerText = hitokoto; // 显示一言句子
+                sourceElement.innerText = "——" + from; // 显示来源
+            } else {
+                console.log("请求失败：" + xhr.status);
+            }
+        }
+    };
+    xhr.send();
+}
+</script>
 </html>
