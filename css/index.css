@@ -1,6 +1,11 @@
 /* 设置网页背景 */
 body {
   background-color: #fffefa;
+  display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 让整个页面铺满视口高度 */
+            margin: 0;
 }
 a {
   text-decoration: none; /* 去除所有链接的文本装饰线 */
@@ -8,30 +13,27 @@ a {
 
 
 /* 容器样式 */
-.container {
-  display: flex;
-  position: absolute; /* 绝对定位 */
-  top: 50%;
-  left: 50%;
+.level {
+  text-align: center;
   width: 80%;
   height: 80%;
   border-radius: 30px; /* 圆角 */
   background-color: rgb(2, 2, 2);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /*水平和垂直居中*/
           border-radius: 30px;
-          background: #fffefa;
+          background: #b6a973;
           box-shadow: 15px 15px 30px #bebebe,
-                     -15px -15px 30px #fffefa;        
+                     -15px -15px 30px #fffefa; 
+                     
+      
 }
 
-/* 左边模块样式 */
-.person {
+/* 个人介绍模块样式 */
+.level-center {
   position: relative;
   background-color: rgba(50, 153, 153, 0);
   display: flex;
   justify-content: center;
-  margin-left: 0 auto;
+  margin: 0 auto;
   width: 40%;
   height: 100%;
 }
@@ -40,12 +42,12 @@ a {
 .circle {
   position:absolute;
   background-color: rgba(0, 0, 0, 0);
-  top:10%;
+  top:15%;
   margin: 0 auto;
   width: 70%;
   aspect-ratio: 1/1;
   border-radius: 50%; /* 圆角 */
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   -webkit-animation: round 3s infinite;
           animation: round 3s infinite; /* 旋转动画 */
 }
@@ -71,11 +73,10 @@ a {
 }
 .circle:before {
   position: absolute;
-  top:32%;
-  aspect-ratio: 1/1;
+top: -5px;
   content: '';
-  width: 20px;
-  height: 20px;
+  width: 8px;
+  height: 8px;
   background: #000000;
   border-radius: 50%;
 }
@@ -84,7 +85,7 @@ a {
 .header {
   position: absolute;
   background-color: rgba(176, 58, 58, 0);
-  top:10%;
+  top:15%;
   margin: 0 auto;
   width: 70%;
   aspect-ratio: 1/1;
@@ -120,15 +121,15 @@ a {
 .introduction {
   position: absolute;
   width:70%;
-  height: 8%;
+  height: 10%;
   top: 68%;
-  border-bottom: 2px solid #000000;
+
 }
 .introduction h1,
 .introduction h2 {
   font-weight: bold;
   text-align: center;
-  font-size: 20%;
+  font-size: 90%;
   margin: 0;
   color: #000000;
 }
@@ -140,7 +141,6 @@ a {
   width: 100%;
   height: 8%;
   top: 78%;
-  left: 0;
   display: flex;
   justify-content: center; /* 水平居中 */
 
@@ -151,158 +151,4 @@ a {
   color: #000000; /* 调整图标颜色为白色 */
   margin: -7%;
   /* 可以根据需要调整其他样式 */
-}
-
-
-
-/* 右边模块样式 */
-.function_container {
-  position: relative;
-  background-color: rgba(198, 148, 83, 0.231);
-  width: 60%;
-  height: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-/* 初始样式 */
-.top1, .top2 {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
-  max-width: 90%; /* 设置最大宽度 */
-  height: 20%;
-  top: 10%;
-  color: #000000;
-  border-radius: 23px;
-  background-color: rgba(37, 81, 193, 0.581);
-  margin: 2vm;
-}
-.top2{
-  right: 5%;
-}
-.top1{
-  left: 5%;
-}
-
-#sentence {
-  font-size: 1.5vw; /* 使用视窗宽度的百分比 */
-}
-
-#source {
-  font-size: 1.3vw; /* 使用视窗宽度的百分比 */
-}
-
-.date {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  color: #000000;
-  font-size: 1vw; /* 使用视窗宽度的百分比 */
-  transform: translateX(-50%); /* 仅水平居中 */
-}
-
-.time {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  color: #000000;
-  font-size: 5vw; /* 使用视窗宽度的百分比 */
-  transform: translateX(-50%); /* 仅水平居中 */
-}
-
-/* 响应式调整 - 平板设备 */
-@media (max-width: 1024px) {
-  .top1, .top2 {
-    width: 70%; /* 在平板设备上适度增加宽度 */
-    font-size: 2vw; /* 调整字体大小 */
-  }
-}
-
-/* 响应式调整 - 手机设备 */
-@media (max-width: 768px) {
-  .top1, .top2 {
-    width: 90%; /* 在手机设备上增加宽度 */
-    font-size: 3vw; /* 进一步调整字体大小 */
-  }
-}
-
-/* 根据需要添加其他媒体查询 */
-@media (max-width: 480px) {
-  .top1, .top2 {
-    width: 100%; /* 在更小的屏幕上占据整个宽度 */
-    font-size: 4vw; /* 进一步调整字体大小 */
-  }
-
-  .date {
-    font-size: 2vw; /* 调整日期字体大小 */
-  }
-
-  .time {
-    font-size: 8vw; /* 调整时间字体大小 */
-  }
-}
-
-
-/* 功能区样式 */
-.function-box {
-  position: relative;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 60%;
-  background-color: rgba(58, 58, 146, 0);
-}
-
-.drawer {
-  display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  width: 33.33%;
-  height: 50%;
-  background-color: #a42e2e;
-}
-
-.contentbox {
-  position:absolute;
-  display: flex; /* 使用 Flexbox 布局 */
-  align-items: center; /* 垂直居中 */
-  width: 30%;
-  aspect-ratio: 2/1;
-  border-radius: 10px;
-  background-color: #0026ff;
-  overflow: hidden; /* 防止子元素溢出 */
-}
-
-.contentbox img,
-.contentbox h1,
-.contentbox h2,
-.contentbox h3 {
-  flex: 1; /* 均等占据剩余空间 */
-  padding: 10px; /* 添加一些内边距 */
-}
-
-.contentbox img {
-  max-width: 100%; /* 图片最大宽度为容器宽度 */
-  height: auto; /* 图片高度自适应 */
-}
-
-.contentbox h1,
-.contentbox h2,
-.contentbox h3 {
-  color: #000;
-  margin: 0; /* 移除默认的外边距 */
-  font-size: 2vm;
-}
-
-.contentbox:hover, .contentbox:focus, .contentbox:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
 }
