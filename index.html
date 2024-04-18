@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"><!--bulma框架-->
 
+  <!-- 抽屉 -->
+  <link rel="stylesheet" href="css/drawer.css">
+  <script src="js/drawer.js"></script>
+
   <script src="js/style.js"></script>
   <script src="js/mouse.js"></script>
   <script src="js/date&weather.js"></script>
@@ -46,8 +50,18 @@
 
       <div id="personal_link" class="personal_link">
         <!-- Twitter 图标链接 -->
-        <a href="https://twitter.com/YourTwitterHandle" target="_blank" class="personal_link">
+        <a href="https://twitter.com/coveman33" target="_blank">
           <i class="fab fa-twitter"></i> <!-- 使用 Font Awesome 的 Twitter 图标 -->
+        </a>
+        <a href="https://space.bilibili.com/237270715" target="_blank"><i class="fab fa-brands fa-bilibili"></i></a>
+        <a href="https://github.com/dashboard" target="_blank">
+          <i class="fab fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:weilande466@gmail.com" target="_blank">
+          <i class="fab fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://amused-gas-f68.notion.site/ba2bc5a0ec6b490d909607e295a6026f" target="_blank">
+          <i class="fab fa-solid fa-book-open"></i>
         </a>
         <!-- 其他社交媒体图标链接 -->
       </div>
@@ -55,32 +69,28 @@
 
     </div>
 
-   
-    
+
+
   </div>
   </div>
   </div>
+
+
+  <div class="drawer" id="myDrawer">
+    <div class="drawer-content">
+      <span class="closeButton" id="closeDrawer"><i class="fas fa-times"></i></span>
+      <p>这里是抽屉内容。</p>
+      <p>可以放置你的文本、表单或其他内容。</p>
+    </div>
+  </div>
+
+  <button class="button is-primary" id="toggleDrawer">
+    Wheel Up
+  </button>
+
 </body>
-<script>
-  function getHitokoto() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://v1.hitokoto.cn");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                var hitokoto = response.hitokoto; // 获取一言内容
-                var from = response.from; // 获取来源
-                var sentenceElement = document.getElementById("sentence");
-                var sourceElement = document.getElementById("source");
-                sentenceElement.innerText = hitokoto; // 显示一言句子
-                sourceElement.innerText = "——" + from; // 显示来源
-            } else {
-                console.log("请求失败：" + xhr.status);
-            }
-        }
-    };
-    xhr.send();
-}
+
+
 </script>
+
 </html>

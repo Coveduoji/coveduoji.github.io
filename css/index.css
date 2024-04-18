@@ -34,7 +34,7 @@ a {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 40%;
+  width: 100%;
   height: 100%;
 }
 
@@ -44,7 +44,7 @@ a {
   background-color: rgba(0, 0, 0, 0);
   top:15%;
   margin: 0 auto;
-  width: 70%;
+ height: 50%;
   aspect-ratio: 1/1;
   border-radius: 50%; /* 圆角 */
   border: 1px solid #000000;
@@ -87,7 +87,7 @@ top: -5px;
   background-color: rgba(176, 58, 58, 0);
   top:15%;
   margin: 0 auto;
-  width: 70%;
+  height: 50%;
   aspect-ratio: 1/1;
   border-radius: 50%; /* 圆角 */
 }
@@ -119,17 +119,20 @@ top: -5px;
 
 /* 个人介绍样式 */
 .introduction {
+  background-color: rgba(127, 255, 212, 0);
   position: absolute;
-  width:70%;
-  height: 10%;
+  width:100%;
+  height: 15%;
   top: 68%;
+  padding: 0;
+  /* margin-bottom: 1%; */
 
 }
 .introduction h1,
 .introduction h2 {
   font-weight: bold;
   text-align: center;
-  font-size: 90%;
+  font-size: 100%;
   margin: 0;
   color: #000000;
 }
@@ -137,18 +140,16 @@ top: -5px;
 /* 个人链接样式 */
 .personal_link {
   position: absolute;
-  background-color: #ffffff00;
+  background-color: #981d1d00;
   width: 100%;
   height: 8%;
-  top: 78%;
-  display: flex;
-  justify-content: center; /* 水平居中 */
-
+  top: 80%;
 }
 
 .fab {
-  font-size: 100%;
+  background-color: #00000000;
+  font-size: 150%;
+  margin: 2%;
   color: #000000; /* 调整图标颜色为白色 */
-  margin: -7%;
   /* 可以根据需要调整其他样式 */
 }
