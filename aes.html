@@ -1,12 +1,10 @@
 <!DOCTYPE html> <!-- 声明文档类型为HTML -->
 <html>
+
 <head>
   <title>AES加密</title> <!-- 网页标题为"AES加密" -->
   <!-- 引入字体库 -->
-  <script
-    type="text/javascript"
-    src="http://cdn.repository.webfont.com/wwwroot/js/wf/youziku.api.min.js"
-  ></script>
+  <script type="text/javascript" src="http://cdn.repository.webfont.com/wwwroot/js/wf/youziku.api.min.js"></script>
   <script type="text/javascript">
     // 使用Youziku API加载特定字体
     $webfont.load(
@@ -28,12 +26,13 @@
   <div class="circle-cursor1"></div>
   <div class="circle-cursor2"></div>
 </head>
+
 <body>
   <!-- 添加用于美化鼠标的元素 -->
   <div class="circle-cursor1"></div>
   <div class="circle-cursor2"></div>
   <h1>AES加密&nbsp;—&nbsp;<input type="text" id="userKey" class="userKey" placeholder="请输入您的密钥" />
-</h1> <!-- 页面的主要标题 -->
+  </h1> <!-- 页面的主要标题 -->
   <div class="box">
     <!-- 加密模块 -->
     <h2>加密</h2> <!-- 加密部分的副标题 -->
@@ -45,27 +44,13 @@
     </div>
   </div>
   <div class="encrypt">
-    <textarea
-      id="inputText"
-      class="text-box"
-      placeholder="输入要加密的信息"
-    ></textarea> <!-- 用于输入要加密的文本的文本区域 -->
+    <textarea id="inputText" class="text-box" placeholder="输入要加密的信息"></textarea> <!-- 用于输入要加密的文本的文本区域 -->
     <div class="button-box">
       <button class="button" id="button-1" onclick="encrypt()">
-        <img
-          width="100%"
-          height="100%"
-          src="https://img.icons8.com/officel/100/refresh.png"
-          alt="refresh"
-        />
+        <img width="100%" height="100%" src="https://img.icons8.com/officel/100/refresh.png" alt="refresh" />
       </button> <!-- 触发加密过程的按钮 -->
     </div>
-    <textarea
-      readonly
-      class="text-box"
-      id="outputText"
-      placeholder="加密结果"
-    ></textarea> <!-- 用于显示加密结果的文本区域（只读） -->
+    <textarea readonly class="text-box" id="outputText" placeholder="加密结果"></textarea> <!-- 用于显示加密结果的文本区域（只读） -->
   </div>
 
   <!-- 解密模块 -->
@@ -77,27 +62,13 @@
     <button onclick="generateTxtFile1()">生成并下载txt文件</button> <!-- 触发生成并下载文本文件的按钮 -->
   </div>
   <div class="decrypt">
-    <textarea
-      id="encryptedText"
-      class="text-box"
-      placeholder="输入要解密的信息"
-    ></textarea> <!-- 用于输入要解密的加密文本的文本区域 -->
+    <textarea id="encryptedText" class="text-box" placeholder="输入要解密的信息"></textarea> <!-- 用于输入要解密的加密文本的文本区域 -->
     <div class="button-box">
       <button class="button" onclick="decrypt()">
-        <img
-          width="100%"
-          height="100%"
-          src="https://img.icons8.com/officel/100/refresh.png"
-          alt="refresh"
-        />
+        <img width="100%" height="100%" src="https://img.icons8.com/officel/100/refresh.png" alt="refresh" />
       </button> <!-- 触发解密过程的按钮 -->
     </div>
-    <textarea
-      readonly
-      class="text-box"
-      id="decryptedText"
-      placeholder="解密结果"
-    ></textarea> <!-- 用于显示解密结果的文本区域（只读） -->
+    <textarea readonly class="text-box" id="decryptedText" placeholder="解密结果"></textarea> <!-- 用于显示解密结果的文本区域（只读） -->
   </div>
   <!-- 显示从来源获取的一句hitokoto（一个句子） -->
   <div>
@@ -107,4 +78,5 @@
     </div>
   </div>
 </body>
+
 </html>

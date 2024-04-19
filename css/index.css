@@ -2,13 +2,17 @@
 body {
   background-color: #fffefa;
   display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* 让整个页面铺满视口高度 */
-            margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* 让整个页面铺满视口高度 */
+  margin: 0;
 }
+
 a {
-  text-decoration: none; /* 去除所有链接的文本装饰线 */
+  text-decoration: none;
+  color: #000;
+  /* 去除所有链接的文本装饰线 */
 }
 
 
@@ -17,17 +21,18 @@ a {
   text-align: center;
   width: 80%;
   height: 80%;
-  border-radius: 30px; /* 圆角 */
+  border-radius: 30px;
+  /* 圆角 */
   background-color: rgb(2, 2, 2);
-          border-radius: 30px;
-          background: #b6a973;
-          box-shadow: 15px 15px 30px #bebebe,
-                     -15px -15px 30px #fffefa; 
-                     
-      
+  border-radius: 30px;
+  background: #b6a973;
+  box-shadow: 15px 15px 30px #bebebe,
+    -15px -15px 30px #fffefa;
+
+
 }
 
-/* 个人介绍模块样式 */
+/* 个人介绍样式 */
 .level-center {
   position: relative;
   background-color: rgba(50, 153, 153, 0);
@@ -40,56 +45,63 @@ a {
 
 /* 旋转圆圈样式 */
 .circle {
-  position:absolute;
-  background-color: rgba(0, 0, 0, 0);
-  top:15%;
-  margin: 0 auto;
- height: 50%;
-  aspect-ratio: 1/1;
-  border-radius: 50%; /* 圆角 */
-  border: 1px solid #000000;
-  -webkit-animation: round 3s infinite;
-          animation: round 3s infinite; /* 旋转动画 */
+  position: absolute; /* 使用绝对定位，可以根据父元素定位 */
+  background-color: rgba(0, 0, 0, 0); /* 设置背景色为透明 */
+  top: 15%; /* 从顶部向下偏移15%位置 */
+  margin: 0 auto; /* 左右居中对齐 */
+  height: 50%; /* 设置圆圈的高度为父元素高度的50% */
+  aspect-ratio: 1/1; /* 设置圆圈的宽高比为1:1，使其成为一个正圆 */
+  border-radius: 50%; /* 使用50%的圆角，使元素变为圆形 */
+  border: 1px solid #000000; /* 给圆圈添加1px的实线黑色边框 */
+  -webkit-animation: round 4s infinite; /* 使用round动画，持续4秒，无限循环 */
+  animation: round 4s infinite; /* 同上，兼容其他浏览器 */
 }
+
+/* 定义旋转动画 */
 @-webkit-keyframes round {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); /* 从0度开始旋转 */
+    transform: rotate(0deg); /* 兼容其他浏览器 */
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); /* 旋转到360度，完整一圈 */
+    transform: rotate(360deg); /* 兼容其他浏览器 */
   }
 }
+
 @keyframes round {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); /* 从0度开始旋转 */
+    transform: rotate(0deg); /* 兼容其他浏览器 */
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); /* 旋转到360度，完整一圈 */
+    transform: rotate(360deg); /* 兼容其他浏览器 */
   }
 }
+
+/* 添加圆圈上的小圆点 */
 .circle:before {
-  position: absolute;
-top: -5px;
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #000000;
-  border-radius: 50%;
+  position: absolute; /* 使用绝对定位，相对于.circle定位 */
+  top: -5px; /* 位于圆圈顶部上方5px位置 */
+  content: ''; /* 使用空内容 */
+  width: 8px; /* 设置小圆点的宽度 */
+  height: 8px; /* 设置小圆点的高度 */
+  background: #000000; /* 设置小圆点的背景色为黑色 */
+  border-radius: 50%; /* 使小圆点成为一个圆 */
 }
+
 
 /* 头像样式 */
 .header {
   position: absolute;
   background-color: rgba(176, 58, 58, 0);
-  top:15%;
+  top: 15%;
   margin: 0 auto;
   height: 50%;
   aspect-ratio: 1/1;
-  border-radius: 50%; /* 圆角 */
+  border-radius: 50%;
+  /* 圆角 */
 }
 
 /* 头像图像容器样式 */
@@ -103,31 +115,35 @@ top: -5px;
   border-radius: 50%;
   overflow: hidden;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 水平和垂直居中 */
+  transform: translate(-50%, -50%);
+  /* 水平和垂直居中 */
 }
+
 .headshot img {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* 保持比例填充容器 */
+  object-fit: cover;
+  /* 保持比例填充容器 */
 }
 
 /* 个人介绍样式 */
 .introduction {
   background-color: rgba(127, 255, 212, 0);
   position: absolute;
-  width:100%;
+  width: 100%;
   height: 15%;
   top: 68%;
   padding: 0;
   /* margin-bottom: 1%; */
 
 }
+
 .introduction h1,
 .introduction h2 {
   font-weight: bold;
@@ -150,6 +166,7 @@ top: -5px;
   background-color: #00000000;
   font-size: 150%;
   margin: 2%;
-  color: #000000; /* 调整图标颜色为白色 */
+  color: #000000;
+  /* 调整图标颜色为白色 */
   /* 可以根据需要调整其他样式 */
 }
