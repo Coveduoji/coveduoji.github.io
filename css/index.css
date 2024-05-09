@@ -170,3 +170,149 @@ a {
   /* 调整图标颜色为白色 */
   /* 可以根据需要调整其他样式 */
 }
+
+/* 样式定义 */
+
+/* 抽屉容器 */
+.drawer {
+  position: fixed;
+  /* 使用固定定位，相对于浏览器窗口定位 */
+  bottom: 0%;
+  /* 距离窗口底部的距离为 0 */
+  transform: translateX(-50%);
+  left: 50%;
+  width: 70%;
+  /* 宽度占据整个窗口 */
+  height: 0%;
+  /* 初始高度为 0，抽屉关闭时隐藏 */
+  background-color: #f5f5f5;
+  /* 抽屉背景色 */
+  overflow-y: auto;
+  /* 内容超出抽屉部分隐藏 */
+  border-radius: 18px;
+  transition: height 0.5s ease;
+  /* 定义高度变化时的过渡效果 */
+  /* 隐藏滚动条 */
+  scrollbar-width: none;
+  /* Firefox 支持，隐藏滚动条 */
+  -ms-overflow-style: none;
+  /* IE 和 Edge 支持，隐藏滚动条 */
+
+  /* WebKit 内核（Chrome、Safari）下隐藏滚动条 */
+  &::-webkit-scrollbar {
+      display: none;
+  }
+}
+
+/* 抽屉内容区域 */
+.drawer-content {
+  padding: 40px 20px;
+  /* 内容区域的内边距 */
+  overflow-y: auto;
+  /* 垂直方向溢出时显示滚动条 */
+
+}
+
+.cell {
+  background-color: rgba(31, 4, 233, 0.341);
+  aspect-ratio: 16/8;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  /* 边框样式 */
+  margin: 0;
+  /* 外边距 */
+  padding: 10px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  /* 3D效果 */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  /* 过渡动画时间 */
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  /* 过渡动画属性 */
+  background: #ffffff;
+  /* 背景颜色 */
+  box-shadow: 25px 25px 44px #ddd9d3, -25px -25px 44px #ffffff;
+  /* 阴影效果 */
+}
+
+/* 鼠标悬停时工具样式 */
+.cell:hover,
+.cell:focus,
+.cell:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  /* 缩放效果 */
+  cursor: none;
+  /* 鼠标悬停时的光标样式 */
+}
+
+@font-face {
+  font-family: "苍耳今楷";
+  src: url(/font/苍耳今楷.ttf);
+}
+
+h3 {
+  font-family: "苍耳今楷";
+}
+
+/* 打开抽屉时的样式 */
+.drawer.open {
+  height: 70%;
+  /* 抽屉展开的高度 */
+  bottom: 3vh;
+}
+
+/* 打开抽屉按钮 */
+#toggleDrawer {
+  position: fixed;
+  /* 使用固定定位，相对于浏览器窗口定位 */
+  bottom: 2px;
+  background-color: #3273dc00;
+  /* 按钮背景色 */
+  color: #000000;
+  /* 按钮文字颜色 */
+  border: none;
+  /* 去掉边框 */
+  padding: 10px 20px;
+  /* 按钮内边距 */
+  border-radius: 5px;
+  /* 圆角边框 */
+  transform: translateX(-50%);
+  /* 水平居中 */
+  animation: bounce 2s infinite alternate;
+}
+
+/* 定义按钮上下跳动的动画 */
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-10px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* 关闭按钮样式 */
+.closeButton {
+  position: absolute;
+  /* 使用绝对定位，相对于最近的具有定位的父元素定位 */
+  top: 10px;
+  /* 距离父元素顶部的距离为 10px */
+  right: 10px;
+  /* 距离父元素右侧的距离为 10px */
+  font-size: 1.2rem;
+  /* 字体大小 */
+  color: #666666;
+  /* 文字颜色 */
+  cursor: pointer;
+  /* 鼠标指针样式为手型 */
+}
