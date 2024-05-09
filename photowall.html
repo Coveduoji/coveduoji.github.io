@@ -4,43 +4,53 @@
 
 <head>
   <title>照片墙</title>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/photowall.css" rel="stylesheet" type="text/css" />
   <link href="css/mouse.css" rel="stylesheet" type="text/css" />
   <script src="js/mouse.js"></script>
   <script src="js/pho.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"><!--bulma框架-->
   <div class="circle-cursor1"></div>
   <div class="circle-cursor2"></div>
 </head>
 
 <body>
-  <div class="categories">
-    <span class="category" onclick="filterImages('all',event)">全部</span>
-    <span class="category" onclick="filterImages('2023',event)">2023</span>
-    <span class="category" onclick="filterImages('2024',event)">2024</span>
-    <span class="category" onclick="filterImages('2025',event)">2025</span>
+  <div class="categories" id="nav">
+<!-- 导航链接 -->
+    <nav>
+      <ul>
+        <li class="category" onclick="filterImages('all',event)">全部</li>
+        <li class="category" onclick="filterImages('2023',event)">2023</li>
+        <li class="category" onclick="filterImages('2024',event)">2024</li>
+        <li class="category" onclick="filterImages('2025',event)">2025</li>
+      </ul>
+    </nav>
   </div>
-  <div class="gallery" id="gallery">
+
+  <div class="gallery">
     <!-- 添加更多图片... -->
-    <img alt="img\2023\1.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\1.jpg" /><img
-      alt="img\2023\2.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\2.jpg" /><img
-      alt="img\2023\3.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\3.jpg" /><img
-      alt="img\2023\4.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\4.jpg" /><img
-      alt="img\2023\5.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\5.jpg" /><img
-      alt="img\2023\6.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\6.jpg" /><img
-      alt="img\2023\7.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\7.jpg" /><img
-      alt="img\2023\8.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\8.jpg" /><img
-      alt="img\2023\9.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\9.jpg" /><img
-      alt="img\2023\10.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\10.jpg" /><img
-      alt="img\2023\11.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\11.jpg" /><img
-      alt="img\2023\12.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\12.jpg" /><img
-      alt="img\2023\13.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\13.jpg" /><img
-      alt="img\2023\14.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\14.jpg" /><img
-      alt="img\2023\15.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\15.jpg" /><img
-      alt="img\2023\16.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\16.jpg" /><img
-      alt="img\2023\17.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\17.jpg" /><img
-      alt="img\2023\18.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\18.jpg" /><img
-      alt="img\2023\19.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\19.jpg" /><img
-      alt="img\2023\20.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\20.jpg" />
+    <img  alt="img\2023\01.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\01.jpg" /><img
+          alt="img\2023\02.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\02.jpg" /><img
+          alt="img\2023\03.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\03.jpg" /><img
+          alt="img\2023\04.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\04.jpg" /><img
+          alt="img\2023\05.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\05.jpg" /><img
+          alt="img\2023\06.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\06.jpg" /><img
+          alt="img\2023\07.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\07.jpg" /><img
+          alt="img\2023\08.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\08.jpg" /><img
+          alt="img\2023\09.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\09.jpg" /><img
+          alt="img\2023\10.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\10.jpg" /><img
+          alt="img\2023\11.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\11.jpg" /><img
+          alt="img\2023\12.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\12.jpg" /><img
+          alt="img\2023\13.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\13.jpg" /><img
+          alt="img\2023\14.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\14.jpg" /><img
+          alt="img\2023\15.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\15.jpg" /><img
+          alt="img\2023\16.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\16.jpg" /><img
+          alt="img\2023\17.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\17.jpg" /><img
+          alt="img\2023\18.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\18.jpg" /><img
+          alt="img\2023\19.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\19.jpg" /><img
+          alt="img\2023\20.jpg" class="column 2023" onclick="focusImage(this)" src="img\2023\20.jpg" />
   </div>
 </body>
 
