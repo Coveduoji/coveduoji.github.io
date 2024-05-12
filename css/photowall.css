@@ -48,7 +48,7 @@ body {
 }
 
 .gallery {
-  column-count: 3; /* 列数 */
+  column-count: 5; /* 列数 */
   column-gap: 10px; /* 列之间的间距 */
 }
 
@@ -58,3 +58,15 @@ body {
   display: block;
   margin-bottom: 10px;
 }
+/* 响应式布局 */
+        @media (min-width: 768px) {
+            .gallery {
+                column-count: 3; /* 大屏幕时显示3列 */
+            }
+        }
+
+        @media (max-width: 767px) {
+            .gallery {
+                column-count: 2; /* 小屏幕时显示2列 */
+            }
+        }
