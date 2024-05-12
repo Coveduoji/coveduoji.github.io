@@ -61,12 +61,17 @@ body {
 /* 响应式布局 */
         @media (min-width: 768px) {
             .gallery {
-                column-count: 3; /* 大屏幕时显示3列 */
+                column-count: 5; /* 大屏幕时显示3列 */
             }
         }
 
         @media (max-width: 767px) {
             .gallery {
-                column-count: 2; /* 小屏幕时显示2列 */
+                column-count: 3; /* 小屏幕时显示2列 */
             }
+        }
+        @media (max-width: 500px){
+          .gallery{
+            column-count: 1;
+          }
         }
