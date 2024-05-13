@@ -1,18 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+}
 /* 导航栏 */
 nav {
-  background: #ffffff;
-  border-radius: 50px;
-  padding: 10px;
+  position: fixed;/* 将导航栏固定在页面顶部 */
+  top: 0; /* 距离视口顶部的距离为 0 */
+  z-index: 99; 
+  background: #000000cf;
+  border-radius: 10px;
+  padding: 1px;
+  width: 100%;
   box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
 }
 nav ul li {
   list-style: none;
   display: inline-block;
-  padding: 13px 35px;
-  margin: 10px;
-  font-size: 18px;
+  padding: 1% 2%;
+  margin: 1%;
+  font-size: 100%;
   font-weight: 500;
-  color: #777;
+  color: #ffffff;
   cursor: pointer;
   position: relative;
   z-index: 2;
@@ -21,7 +30,7 @@ nav ul li {
 }
 nav ul li::after {
   content: '';
-  background: #f44566;
+  background: #ffffff;
   width: 100%;
   height: 100%;
   border-radius: 30px;
@@ -34,22 +43,46 @@ nav ul li::after {
   transition: top 0.5s,opacity 0.5s;
 }
 nav ul li:hover{
-  color: #fff;
+  color: #000000;
 }
 nav ul li:hover::after{
   top: 50%;
   opacity: 1;
 }
+.category.active {
+  color: red; /* 设置激活颜色 */
+}
+
+.logo {
+  text-align: center;
+  padding: 5px;
+  background-image:url(/img/background.jpg);
+  width: 100%;
+  margin-top: 5%;
+  background-size: cover; /* 让背景图片覆盖整个容器 */
+  background-position: center; /* 将背景图片居中 */
+  background-repeat: no-repeat; /* 禁止背景图片重复 */
+}
+@font-face {
+  font-family:"Shintyan";
+  src: url(/font/Shintyan.ttf);
+}
+.logo h1 {
+  margin: 10%;
+  font-size: 90px;
+  color: #ffffff; /* 设置颜色 */
+  font-family: "Shintyan";
+}
 
 /* 实现瀑布流 */
 /* 图库容器样式 */
-body {
-  font-family: Arial, sans-serif;
-}
+
 
 .gallery {
   column-count: 5; /* 列数 */
   column-gap: 10px; /* 列之间的间距 */
+  padding: 3% 1%;
+  border: 3px solid #000;
 }
 
 .gallery img {
