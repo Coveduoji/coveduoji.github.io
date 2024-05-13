@@ -41,6 +41,7 @@ a {
   margin: 0 auto;
   width: 100%;
   height: 100%;
+  
 }
 
 /* 旋转圆圈样式 */
@@ -102,6 +103,7 @@ a {
   aspect-ratio: 1/1;
   border-radius: 50%;
   /* 圆角 */
+  
 }
 
 /* 头像图像容器样式 */
@@ -117,6 +119,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   /* 水平和垂直居中 */
+  
 }
 
 .headshot img {
@@ -130,6 +133,7 @@ a {
   -o-object-fit: cover;
   object-fit: cover;
   /* 保持比例填充容器 */
+  
 }
 
 /* 个人介绍样式 */
@@ -169,7 +173,7 @@ a {
   font-size: 150%;
   margin: 2%;
   color: #000000;
-  /* 调整图标颜色为白色 */
+  
   /* 可以根据需要调整其他样式 */
 }
 
