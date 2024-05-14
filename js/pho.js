@@ -64,3 +64,4 @@ function filterImages(categories) {
     // 为当前分类添加 "active" 类名，表示激活状态
     currentCategory.classList.add("active");
 }
+

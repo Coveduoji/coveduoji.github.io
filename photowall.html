@@ -9,14 +9,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/photowall.css" rel="stylesheet" type="text/css" />
   <link href="css/mouse.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./musicplayer/music.css" type="text/css">
+
   <script src="js/mouse.js"></script>
   <script src="js/pho.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"><!--bulma框架-->
   <div class="circle-cursor1"></div>
   <div class="circle-cursor2"></div>
+  <style>
+
+</style>
 </head>
 
 <body>
+<!-- 背景音乐播放器 -->
+<audio id="myAudio" autoplay>
+  <source src="./musicplayer/fuzzy wuzzy+3.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<button id="playPauseButton" onclick="togglePlayPause()">
+  <img src="./img/music.jpg" alt="Album Cover">
+</button>
+
+
+
   <div class="categories" id="nav">
 <!-- 导航链接 -->
     <nav>
@@ -55,5 +72,6 @@
           alt="img\2023\20.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\20.jpg" />
   </div>
 </body>
+<script src="/musicplayer/music.js"></script>
 
 </html>
