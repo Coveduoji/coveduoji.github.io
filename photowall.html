@@ -15,9 +15,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"><!--bulma框架-->
   <div class="circle-cursor1"></div>
   <div class="circle-cursor2"></div>
-  <style>
-
-</style>
+  <audio id="myAudio" autoplay>
+    <source src="./musicplayer/fuzzy wuzzy+3.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 </head>
 
 <body>
@@ -60,10 +61,7 @@
   </div>
 </body>
 <!-- 背景音乐播放器 -->
-<audio id="myAudio" autoplay>
-  <source src="./musicplayer/fuzzy wuzzy+3.mp3" type="audio/mp3">
-  Your browser does not support the audio element.
-</audio>
+
 
 <button id="playPauseButton" onclick="togglePlayPause()">
   <img src="./img/music.jpg" alt="Album Cover">
