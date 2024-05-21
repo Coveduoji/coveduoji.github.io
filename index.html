@@ -8,12 +8,375 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"><!--bulma框架-->
 
   <!-- 抽屉 -->
-  <link rel="stylesheet" href="css/drawer.css">
-  <script src="js/drawer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggleDrawer');
+    const closeButton = document.getElementById('closeDrawer');
+    const drawer = document.getElementById('myDrawer');
 
-  <script src="js/style.js"></script>
+    // 点击打开抽屉的按钮时触发的事件处理函数
+    toggleButton.addEventListener('click', function() {
+        // 切换抽屉的打开状态类名
+        drawer.classList.toggle('open');
+
+        // 如果抽屉已经打开，则隐藏打开抽屉按钮
+        if (drawer.classList.contains('open')) {
+            toggleButton.style.display = 'none';
+        } else {
+            toggleButton.style.display = ''; // 恢复按钮的默认显示方式
+        }
+    });
+
+    // 点击关闭抽屉的按钮时触发的事件处理函数
+    closeButton.addEventListener('click', function() {
+        drawer.classList.remove('open');
+        toggleButton.style.display = ''; // 恢复按钮的默认显示方式
+    });
+
+    // 点击文档任意位置关闭抽屉的事件处理函数
+    document.addEventListener('click', function(event) {
+        // 检查点击事件的目标是否在抽屉容器内部或者是打开抽屉按钮本身
+        const isClickInsideDrawer = drawer.contains(event.target);
+        const isClickOnToggleButton = event.target === toggleButton;
+
+        // 如果点击事件的目标不在抽屉容器内部且不是打开抽屉按钮本身，则关闭抽屉
+        if (!isClickInsideDrawer && !isClickOnToggleButton) {
+            drawer.classList.remove('open');
+            toggleButton.style.display = ''; // 恢复按钮的默认显示方式
+        }
+    });
+
+});
+
+  </script>
+
   <script src="js/mouse.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
+<style>
+  /* 设置网页背景 */
+body {
+  background-color: #fffefa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* 让整个页面铺满视口高度 */
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  /* 去除所有链接的文本装饰线 */
+}
+
+
+/* 容器样式 */
+.level {
+  text-align: center;
+  width: 80%;
+  height: 80%;
+  border-radius: 30px;
+  /* 圆角 */
+  background-color: rgb(2, 2, 2);
+  border-radius: 30px;
+  background: #b6a973;
+  box-shadow: 15px 15px 30px #bebebe,
+    -15px -15px 30px #fffefa;
+
+
+}
+
+/* 个人介绍样式 */
+.level-center {
+  position: relative;
+  background-color: rgba(50, 153, 153, 0);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  
+}
+
+/* 旋转圆圈样式 */
+.circle {
+  position: absolute; /* 使用绝对定位，可以根据父元素定位 */
+  background-color: rgba(0, 0, 0, 0); /* 设置背景色为透明 */
+  top: 15%; /* 从顶部向下偏移15%位置 */
+  margin: 0 auto; /* 左右居中对齐 */
+  height: 50%; /* 设置圆圈的高度为父元素高度的50% */
+  aspect-ratio: 1/1; /* 设置圆圈的宽高比为1:1，使其成为一个正圆 */
+  border-radius: 50%; /* 使用50%的圆角，使元素变为圆形 */
+  border: 1px solid #000000; /* 给圆圈添加1px的实线黑色边框 */
+  -webkit-animation: round 4s infinite; /* 使用round动画，持续4秒，无限循环 */
+  animation: round 4s infinite; /* 同上，兼容其他浏览器 */
+}
+
+/* 定义旋转动画 */
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg); /* 从0度开始旋转 */
+    transform: rotate(0deg); /* 兼容其他浏览器 */
+  }
+  100% {
+    -webkit-transform: rotate(360deg); /* 旋转到360度，完整一圈 */
+    transform: rotate(360deg); /* 兼容其他浏览器 */
+  }
+}
+
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg); /* 从0度开始旋转 */
+    transform: rotate(0deg); /* 兼容其他浏览器 */
+  }
+  100% {
+    -webkit-transform: rotate(360deg); /* 旋转到360度，完整一圈 */
+    transform: rotate(360deg); /* 兼容其他浏览器 */
+  }
+}
+
+/* 添加圆圈上的小圆点 */
+.circle:before {
+  position: absolute; /* 使用绝对定位，相对于.circle定位 */
+  top: -5px; /* 位于圆圈顶部上方5px位置 */
+  content: ''; /* 使用空内容 */
+  width: 8px; /* 设置小圆点的宽度 */
+  height: 8px; /* 设置小圆点的高度 */
+  background: #000000; /* 设置小圆点的背景色为黑色 */
+  border-radius: 50%; /* 使小圆点成为一个圆 */
+}
+
+
+/* 头像样式 */
+.header {
+  position: absolute;
+  background-color: rgba(176, 58, 58, 0);
+  top: 15%;
+  margin: 0 auto;
+  height: 50%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  /* 圆角 */
+  
+}
+
+/* 头像图像容器样式 */
+.headshot {
+  background-color: rgba(37, 198, 198, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* 水平和垂直居中 */
+  
+}
+
+.headshot img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* 保持比例填充容器 */
+  
+}
+
+/* 个人介绍样式 */
+.introduction {
+  background-color: rgba(127, 255, 212, 0);
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  top: 68%;
+  padding: 0;
+  /* margin-bottom: 1%; */
+
+}
+
+
+.introduction h1,
+.introduction h2 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 100%;
+  margin: 0;
+  color: #000000;
+  font-family: "佛系";
+}
+
+/* 个人链接样式 */
+.personal_link {
+  position: absolute;
+  background-color: #981d1d00;
+  width: 100%;
+  height: 8%;
+  top: 80%;
+}
+
+.fab {
+  background-color: #00000000;
+  font-size: 150%;
+  margin: 2%;
+  color: #000000;
+  
+  /* 可以根据需要调整其他样式 */
+}
+
+/* 样式定义 */
+
+/* 抽屉容器 */
+.drawer {
+  position: fixed;
+  /* 使用固定定位，相对于浏览器窗口定位 */
+  bottom: 0%;
+  /* 距离窗口底部的距离为 0 */
+  transform: translateX(-50%);
+  left: 50%;
+  width: 70%;
+  /* 宽度占据整个窗口 */
+  height: 0%;
+  /* 初始高度为 0，抽屉关闭时隐藏 */
+  background-color: #f5f5f5;
+  /* 抽屉背景色 */
+  overflow-y: auto;
+  /* 内容超出抽屉部分隐藏 */
+  border-radius: 18px;
+  transition: height 0.5s ease;
+  /* 定义高度变化时的过渡效果 */
+  /* 隐藏滚动条 */
+  scrollbar-width: none;
+  /* Firefox 支持，隐藏滚动条 */
+  -ms-overflow-style: none;
+  /* IE 和 Edge 支持，隐藏滚动条 */
+
+  /* WebKit 内核（Chrome、Safari）下隐藏滚动条 */
+  &::-webkit-scrollbar {
+      display: none;
+  }
+}
+
+/* 抽屉内容区域 */
+.drawer-content {
+  padding: 40px 20px;
+  /* 内容区域的内边距 */
+  overflow-y: auto;
+  /* 垂直方向溢出时显示滚动条 */
+
+}
+
+.cell {
+  background-color: rgba(31, 4, 233, 0.341);
+  aspect-ratio: 16/8;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  /* 边框样式 */
+  margin: 0;
+  /* 外边距 */
+  padding: 10px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  /* 3D效果 */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  /* 过渡动画时间 */
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  /* 过渡动画属性 */
+  background: #ffffff;
+  /* 背景颜色 */
+  box-shadow: 25px 25px 44px #ddd9d3, -25px -25px 44px #ffffff;
+  /* 阴影效果 */
+}
+
+/* 鼠标悬停时工具样式 */
+.cell:hover,
+.cell:focus,
+.cell:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  /* 缩放效果 */
+  cursor: none;
+  /* 鼠标悬停时的光标样式 */
+}
+
+@font-face {
+  font-family: "苍耳今楷";
+  src: url(/font/苍耳今楷.ttf);
+}
+
+h3 {
+  font-family: "苍耳今楷";
+}
+
+/* 打开抽屉时的样式 */
+.drawer.open {
+  height: 70%;
+  /* 抽屉展开的高度 */
+  bottom: 3vh;
+}
+
+/* 打开抽屉按钮 */
+#toggleDrawer {
+  position: fixed;
+  /* 使用固定定位，相对于浏览器窗口定位 */
+  bottom: 2px;
+  background-color: #3273dc00;
+  /* 按钮背景色 */
+  color: #000000;
+  /* 按钮文字颜色 */
+  border: none;
+  /* 去掉边框 */
+  padding: 10px 20px;
+  /* 按钮内边距 */
+  border-radius: 5px;
+  /* 圆角边框 */
+  transform: translateX(-50%);
+  /* 水平居中 */
+  animation: bounce 2s infinite alternate;
+  cursor: none;
+}
+
+/* 定义按钮上下跳动的动画 */
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-10px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* 关闭按钮样式 */
+.closeButton {
+  position: absolute;
+  /* 使用绝对定位，相对于最近的具有定位的父元素定位 */
+  top: 10px;
+  /* 距离父元素顶部的距离为 10px */
+  right: 10px;
+  /* 距离父元素右侧的距离为 10px */
+  font-size: 1.2rem;
+  /* 字体大小 */
+  color: #666666;
+  /* 文字颜色 */
+}
+</style>
+  <!-- 鼠标 -->
   <link rel="stylesheet" type="text/css" href="css/mouse.css" />
   <!-- 字体 -->
   <link rel="stylesheet" type="text/css" href="font/font_index.css" />
