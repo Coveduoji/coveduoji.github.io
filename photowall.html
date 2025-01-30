@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 
 <html>
-
 <head>
-  <title>照片墙</title>
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 主界面样式 -->
+<title>照片墙</title>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- 主界面样式 -->
 <style>
   body {
   font-family: Arial, sans-serif;
@@ -123,10 +122,10 @@ nav ul li:hover::after{
         }
 </style>
 <!-- --鼠标-- -->
-  <link href="css/mouse.css" rel="stylesheet" type="text/css" />
-  <script src="js/mouse.js"></script>
-  <!-- 导航栏显示逻辑 -->
-  <script>
+<link href="css/mouse.css" rel="stylesheet" type="text/css"/>
+<script src="js/mouse.js"></script>
+<!-- 导航栏显示逻辑 -->
+<script>
     // 获取名为 "container" 的 DOM 元素
 const container = document.querySelector(".container");
 
@@ -196,24 +195,20 @@ function filterImages(categories) {
 
 
   </script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"><!--bulma框架-->
-  <div class="circle-cursor1"></div>
-  <div class="circle-cursor2"></div>
-  <audio id="myAudio" autoplay>
-    <source src="./musicplayer/fuzzy wuzzy+3.mp3" type="audio/mp3">
+<link href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" rel="stylesheet"/><!--bulma框架-->
+<div class="circle-cursor1"></div>
+<div class="circle-cursor2"></div>
+<audio autoplay="" id="myAudio">
+<source src="./musicplayer/fuzzy wuzzy+3.mp3" type="audio/mp3"/>
     Your browser does not support the audio element.
   </audio>
 </head>
 
 <body>
-
 <!-- 背景音乐播放器 -->
-
-
 <button id="playPauseButton" onclick="togglePlayPause()">
-  <img src="./img/music.jpg" alt="Album Cover">
+  <img alt="Album Cover" src="./img/music.jpg"/>
 </button>
-
 <!-- 播放器逻辑 -->
 <script>
 
@@ -272,48 +267,23 @@ function togglePlayPause() {
 }
 
 </style>
-
-
-
-
-  <div class="categories" id="nav">
+<div class="categories" id="nav">
 <!-- 导航链接 -->
-    <nav>
-      <ul>
-        <li class="category" onclick="filterImages('all',event)">全部</li>
-        <li class="category" onclick="filterImages('2023',event)">2023</li>
-        <li class="category" onclick="filterImages('2024',event)">2024</li>
-        <li class="category" onclick="filterImages('2025',event)">2025</li>
-      </ul>
-    </nav>
-  </div>
-  <div class="logo">
-    <h1>Photo Well</h1>
+<nav>
+<ul>
+<li class="category" onclick="filterImages('all',event)">全部</li>
+<li class="category" onclick="filterImages('2023',event)">2023</li>
+<li class="category" onclick="filterImages('2024',event)">2024</li>
+<li class="category" onclick="filterImages('2025',event)">2025</li>
+</ul>
+</nav>
 </div>
-  <div class="gallery is-mobile">
-    <!-- 添加更多图片... -->
-    <img  alt="img\2023\01.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\01.jpg" /><img
-          alt="img\2023\02.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\02.jpg" /><img
-          alt="img\2023\03.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\03.jpg" /><img
-          alt="img\2023\04.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\04.jpg" /><img
-          alt="img\2023\05.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\05.jpg" /><img
-          alt="img\2023\06.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\06.jpg" /><img
-          alt="img\2023\07.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\07.jpg" /><img
-          alt="img\2023\08.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\08.jpg" /><img
-          alt="img\2023\09.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\09.jpg" /><img
-          alt="img\2023\10.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\10.jpg" /><img
-          alt="img\2023\11.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\11.jpg" /><img
-          alt="img\2023\12.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\12.jpg" /><img
-          alt="img\2023\13.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\13.jpg" /><img
-          alt="img\2023\14.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\14.jpg" /><img
-          alt="img\2023\15.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\15.jpg" /><img
-          alt="img\2023\16.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\16.jpg" /><img
-          alt="img\2023\17.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\17.jpg" /><img
-          alt="img\2023\18.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\18.jpg" /><img
-          alt="img\2023\19.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\19.jpg" /><img
-          alt="img\2023\20.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\20.jpg" />
-  </div>
+<div class="logo">
+<h1>Photo Well</h1>
+</div>
+<div class="gallery is-mobile">
+<!-- 添加更多图片... -->
+<img alt="img\2023\01.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\01.jpg"><img alt="img\2023\02.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\02.jpg"/><img alt="img\2023\03.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\03.jpg"/><img alt="img\2023\04.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\04.jpg"/><img alt="img\2023\05.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\05.jpg"/><img alt="img\2023\06.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\06.jpg"/><img alt="img\2023\07.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\07.jpg"/><img alt="img\2023\08.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\08.jpg"/><img alt="img\2023\09.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\09.jpg"/><img alt="img\2023\10.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\10.jpg"/><img alt="img\2023\11.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\11.jpg"/><img alt="img\2023\12.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\12.jpg"/><img alt="img\2023\13.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\13.jpg"/><img alt="img\2023\14.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\14.jpg"/><img alt="img\2023\15.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\15.jpg"/><img alt="img\2023\16.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\16.jpg"/><img alt="img\2023\17.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\17.jpg"/><img alt="img\2023\18.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\18.jpg"/><img alt="img\2023\19.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\19.jpg"/><img alt="img\2023\20.jpg" class="image 2023" onclick="focusImage(this)" src="img\2023\20.jpg"/>
+</img><img alt="img\2024\01.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\01.jpg"/><img alt="img\2024\02.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\02.jpg"/><img alt="img\2024\03.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\03.jpg"/><img alt="img\2024\04.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\04.jpg"/><img alt="img\2024\05.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\05.jpg"/><img alt="img\2024\06.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\06.jpg"/><img alt="img\2024\07.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\07.jpg"/><img alt="img\2024\08.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\08.jpg"/><img alt="img\2024\09.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\09.jpg"/><img alt="img\2024\10.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\10.jpg"/><img alt="img\2024\11.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\11.jpg"/><img alt="img\2024\12.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\12.jpg"/><img alt="img\2024\13.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\13.jpg"/><img alt="img\2024\14.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\14.jpg"/><img alt="img\2024\15.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\15.jpg"/><img alt="img\2024\16.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\16.jpg"/><img alt="img\2024\17.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\17.jpg"/><img alt="img\2024\18.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\18.jpg"/><img alt="img\2024\19.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\19.jpg"/><img alt="img\2024\20.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\20.jpg"/><img alt="img\2024\21.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\21.jpg"/><img alt="img\2024\22.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\22.jpg"/><img alt="img\2024\23.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\23.jpg"/><img alt="img\2024\24.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\24.jpg"/><img alt="img\2024\25.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\25.jpg"/><img alt="img\2024\26.jpg" class="image 2024" onclick="focusImage(this)" src="img\2024\26.jpg"/></div>
 </body>
-
-
 </html>
